@@ -1,0 +1,98 @@
+Exercice 2 : Calculateur
+
+algorithme calculateur
+variables 
+	operation : string,
+	nombre1, nombre2 : real;
+	
+begin
+	write("Que souhaitez-vous effectuer ? + , *, -, / % ou Q pour quitter ");
+	read(operation);
+	while(operation != "Q")
+		lire(nombre1);
+		lire(nombre2)
+		switch (operation) 
+			"+" : write(nombre1 + nombre2);
+			"-" : write(nombre1 - nombre2);
+			"*" : write(nombre1 * nombre2);
+			"/" : begin
+					if(nombre2 = 0) then begin
+											write("Division By Zero not allowed !");
+										 end
+									else begin
+											write(nombre1 / nombre2);
+										 end
+					endif
+				  end
+			"%" : begin
+					if(nombre2 = 0) then begin
+											write("Division By Zero not allowed !");
+										 end
+									else begin
+											write(nombre1 % nombre2);
+										 end
+					endif
+				  end
+		
+		endSwitch;
+		write("Something else ?");
+		read(operation);
+	endwhile
+	
+end
+
+
+Exercice 2 : factorielle
+
+algorithme factorial
+variables
+	number, factorial, i : integer,
+
+begin
+	read(number);
+	factorial := number;
+	for(i := number - 1; i > 1; i--) 
+		begin
+			factorial := factorial * i;
+		end
+	write("Factorial of ", number, " is ", factorial);
+end
+
+
+Exercice 4 : tableaux de multiplication
+
+algorithme tableaux de multiplication
+variables 
+	i, j : integer;
+
+begin
+	for(i := 1; i <= 10; i++)
+		begin
+			for(j := 1; j <= 10; j++)
+				begin
+					write(i, " x ", j, " = ", i * j);
+				end
+		end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

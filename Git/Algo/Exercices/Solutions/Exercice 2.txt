@@ -1,0 +1,52 @@
+Exercice 1.9
+
+variables
+	A,B,C,laSomme,leProduit entier;
+	laMoyenne reels;
+Debut
+	lire(A,B,C);
+	laSomme:=A+B+C;
+	leProduit:=A*B*C;
+	laMoyenne:=laSomme/3;
+	ecrire(laSomme,leProduit,laMoyenne);
+fin
+
+
+Exercice 1.10
+
+variables
+	largeur,longueur réel;
+Debut
+	lire(largeur,longueur);
+	perimetre:=(longueur+largeur)*2;
+	urface:=longueur*largeur;
+	ecrire("Le périmètre est de: ", perimetre);
+	ecrire("La Surface est de: ", surface)
+fin
+
+
+Exercice 1.11
+
+variables
+	prixArticle, quantiteAchetee, montantTaxe, entier;
+Debut
+	lire (prixArticle, quantiteAchetee, montantTaxe);
+	applicationTaxe:=montantTaxe*prixArticle;
+	prixTcc:=applicationTaxe*quantiteAchetee;
+	prixSansTaxe:=prixArticle*quantiteAchetee;
+	prixTotalTcc:=prixTcc+prixSansTaxe;
+	ecrire("Le prix total TTC est de:" , prixTotalTcc)
+fin
+
+ou
+
+variables	
+	prix,quantite,taxe:réel
+Debut	
+	lire(prix,quantité,taxe);
+	ecrire ("Le Totale est de : " , prix*quantité*(1+taxe))
+fin
+
+
+
+

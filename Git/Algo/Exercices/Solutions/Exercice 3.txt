@@ -1,0 +1,149 @@
+﻿Exercice 3.1
+algorithme verfication_nombre
+variables
+	nombre : réel;
+debut
+	ecrire("Veuillez saisir un nombre différent de zéro :")
+	lire (nombre);
+	si (nombre > 0) alors debut	
+				ecrire ("le nombre saisi est positif");
+			fin	
+			sinon debut
+				ecrire("Le nombres saisie est négatif");
+			fin	
+	finsi
+fin	
+
+
+Exercice 3.2
+algorithme produit_nombres
+variables
+	nombre1, nombre2 : reel;
+debut	
+	ecrire("Veuillez saisir un nombre différent de zéro :");
+	lire (nombre1);
+	ecrire "Veuillez saisir un nombre différent de zéro :");
+	lire (nombre2);
+	
+	si(nombre1 > 0 et nombre2 > 0 ou nombre1 < 0 et nombre2 < 0) alors debut
+										ecrire("Le produit des deux nombres est positif.");
+									fin
+								     sinon debut
+										ecrire ("Le produit des deux nombres est négatif");
+								        fin
+	finsi																  
+fin	
+
+
+Exercice 3.3
+
+algorithme ordre_alphabétique
+variables
+	nom1, nom2, nom3 : chaine_caracteres;
+debut
+	ecrire("Veuillez saisir trois noms :")
+	lire (nom1, nom2, nom3);
+	
+	si(nom1 < nom3 et nom2 < nom3) alors debut	
+						ecrire("Noms triés");
+					     fin
+					sinon debut	
+						ecrire("Noms non triés");
+					     fin	
+	finsi									
+fin	
+
+
+
+Exercice 3.4
+
+algorithme verfication_nombre avec cas nul
+variables
+	nombre : réel;
+debut
+	ecrire("Veuillez saisir un nombre :")
+	lire (nombre);
+	si (nombre > 0) alors debut	
+				ecrire ("le nombre saisi est positif");
+			  fin	
+			sinon si (nombre < 0) alors debut 
+				ecrire("Le nom saisie est négatif")
+			  fin
+			sinon debut	
+			        ecrire("Le nombre est nul");
+			  fin
+		        finsi					
+	finsi
+fin	
+
+
+Exercice 3.5
+
+algorithme produit_nombres
+variables
+	nombre1, nombre2 : reel;
+debut	
+	ecrire("Veuillez saisir un nombre :");
+	lire (nombre1);
+	ecrire "Veuillez saisir un nombre :");
+	lire (nombre2);
+	
+	// Meilleur solution
+	si ((nombre1 < 0 xor nombre2 < 0) et ( nombre1 !=0 et nombre2!=)) alors debut 
+										ecrire ("produit négatif");
+									    fin	
+									  sinon si (nombre1 = 0 ou nombre2 = 0) alors debut			
+											                           ecrire("produit nul");
+													         fin
+													        sinon debut
+														   ecrire("produit positif");
+														fin	
+									finsi		
+	finsi
+	
+	// Solution moyenne
+	si(nombre1 > 0 et nombre2 > 0 ou nombre1 < 0 et nombre2 < 0) alors debut
+									ecrire("Le produit des deux nombres est positif.");
+								       fin
+								     sinon si (nombre1 = 0 ou nombre2 = 0) alors debut
+									                                       ecrire ("Produit nul");
+								                                              fin
+								                                           sinon debut
+									                                       ecrire ("Produit négatif");
+								                                              fin
+							             finsi													
+	finsi																  
+fin	
+
+
+Exercice 3.6
+
+algorithme categorie_enfant
+variables
+	age :entier;
+	
+debut	
+		ecrire ("Saisissez l'âge de votre enfant :");
+		lire(age);
+		si (age = 6 ou age = 7) alors debut
+										ecrire("POUSSIN");
+									  fin	
+		finsi
+		si (age = 8 ou age = 9) alors debut
+										ecrire("PUPILLE");
+									  fin	
+		finsi
+		si (age = 10 ou age = 11) alors debut
+										ecrire("MINIME");
+									   fin	
+		finsi
+		si (age => 12 ) 		   alors debut
+										ecrire("CADET");
+									   fin	
+		finsi
+		si (age < 12 ) 		   alors debut
+										ecrire("Votre enfant n'a pas l'âge");
+									   fin								   
+									   
+		finsi
+fin

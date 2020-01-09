@@ -1,0 +1,131 @@
+Exercice 5.1
+
+algo tableau_multiplication
+
+
+variables
+    nombre, i: integer;
+
+    begin
+        ("Quelle table de multiplication voulez vous connaitre ?");
+        read(nombre);
+        for (i=1; i<11; i++)do        
+            write(i,"X", nombre, "=", nombre*i);
+    end       
+    
+Exercice 5.2
+
+variables
+    Q,operation : string;
+    nbr1,nbr2 :integer;
+do
+    begin
+     write("Voulez allez faire une opération. Si vous ne voulez pas tapez Q pour quitter");
+    read (Q);
+        if( Q !="Q")then
+            begin
+                write("Que voulez faire comme opération ? (veuillez saisir M pour multiplication, A pour addition, S pour soustraction, D pour division   ?");
+                read(operation)
+                write(Veuillez saisir 2 nombres pour votre opération");
+                read (nbr1, nbr2);
+                    if (operation = "M")
+                        then         
+                        write(nbr1,"X", nbr2, "=", nbr1*nbr2);
+                          else if (operation = "A")
+                            then        
+                            write(nbr1,"+", nbr2, "=", nbr1+nbr2);
+                        
+                            else if (operation = "S")
+                                then        
+                                write(nbr1,"-", nbr2, "=", nbr1-nbr2); 
+                            
+                                else if (operation = "D")
+                                    then        
+                                    write(nbr1,"/", nbr2, "=", nbr1/nbr2);
+                                endif
+                            endif
+                          endif
+                    endif
+            end       
+        endif           
+    end                                       
+while (Q != "Q");
+Write("A bientôt);
+exit;
+
+-------------------------------------------------------------------
+Correction Exercice 5.2
+-------------------------------------------------------------------
+
+variables 
+    operation : string
+    nombre1, nombre2 : real;
+
+begin
+    write("Que souhaitez-vous effectuer )
+    read(operation);
+    while (operation != Q);
+        lire(nombre1);
+        lire(nombre2);
+            switch (operation)
+                "+" : write (nombre 1 + nombre 2)
+                "-" : write (nombre 1 - nombre 2)
+                "*" : write (nombre 1 * nombre 2)
+                "/" : begin
+                        if(nombre2 = 0) 
+                            then 
+                                begin       
+                                    write("La division n'est pas possible !");
+                                end
+                            else
+                                begin   
+                                    write (nombre1/nombre2);
+                                end    
+                        endif
+                    end
+                "%" : begin
+                        if(nombre2 = 0) 
+                            then 
+                                begin       
+                                    write("La division n'est pas possible !");
+                                end
+                            else
+                                begin   
+                                    write (nombre1/nombre2);
+                                end    
+                        endif
+                    end      
+end
+    
+
+-------------------------------------------------------------------
+Correction Exercice 5.3
+-------------------------------------------------------------------
+
+variables   
+    number, factorial: integer;
+
+begin
+    read (number) ;
+    factoral := number;
+        for(i := number - 1; i > 1; i--)
+            begin    
+                factorial := factorial * i );   
+            end
+    write("Factorial of", number, "is",factorail);
+end
+
+-------------------------------------------------------------------
+Correction Exercice 5.4
+-------------------------------------------------------------------
+variables 
+	i, j : integer;
+begin
+	for(i := 1; i <= 10; i++)
+		begin
+			for(j := 1; j <= 10; j++)
+				begin
+					write(i, " x ", j, " = ", i * j);
+				end
+		end
+end

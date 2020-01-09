@@ -1,0 +1,209 @@
+Exercice 4.1
+
+variable
+		Tutu, Toto : entier;
+		Tata : chaine_caractere
+Debut
+	si ((Tutu > Toto +4) ou (Tata="OK) 	alors debut
+											Tutu:=Tutu+1
+											 fin
+										sinon debut
+											Tutu:=Tutu-1
+											 fin
+	finsi
+fin
+										 
+
+
+Exercice 4.2
+
+variable 
+	heures, minutes : reel;
+
+Debut
+	ecrire ("Veuillez saisir l'heure actuelle");
+	lire (heures,minutes);
+		si minutes > 59 alors debut
+							minutes:= 0
+						fin
+						sinon debut
+							minutes:=minutes+1
+						fin
+	finsi
+	
+	si heures > 23 	alors debut
+						heures:= 0
+					fin
+	finsi					
+	ecrire( "Dans une minute, il sera :" heures + "heures" + minutes "minutes");
+	
+fin
+
+
+
+
+Exercice 4.3
+
+variable
+	heures, minutes, secondes : reel:
+	
+Debut
+	/* Version courte */
+	ecrire ("Veuillez saisir l'heure actuelle");
+	lire (heures,minute,secondes);
+	
+	/* Longue */
+	ecrire ("Veuillez saisir l'heure actuelle");
+	lire (heures);
+	ecrire ("Les minutes");
+	lire (minute);
+	ecrire ("Et les secondes");
+	lire (secondes);
+				
+		si ( secondes > 59 ) alors debut
+							minutes:= +1;
+							secondes:= 0 ;
+						fin
+						sinon ( secondes < 59 )debut;
+										secondes:=secondes+1;
+						fin
+		finsi
+		si ( minutes > 59 ) alors debut
+							heures:= +1;
+							minutes:= 0 ;
+						fin
+						sinon ( minutes < 59 )debut;
+										minutes:=minutes+1;
+						fin
+		finsi
+	
+		si ( heures > 23 )	alors debut
+							heures:=00;
+						fin
+		finsi	
+		
+	ecrire( "Dans une minute, il sera :" heures + "heures" + minutes "minutes" + secondes "secondes");
+	
+fin
+
+------------------------------------------------------------------------------------
+CORRECTION
+------------------------------------ En Anglais ------------------------------------
+Exrecice 4.3
+
+algorithme heure
+variables
+	hours, minutes, seconds : integer;
+
+begin
+	read(hours, minutes, seconds);
+	if (seconds < 59) 	
+		then 
+			begin
+				seconds++;
+			end
+		else if (minutes = 59 and hours = 23) 
+			then 
+				begin	
+					hours := 0;
+					minutes := 0;
+					seconds := 0;
+				end	
+			else if(minutes !=59) 
+				then 	
+					begin
+						minutes++;
+						seconds :=0;
+					end
+				else 
+					begin
+						hours++;
+						minutes :=0;
+						secondes :=0;
+					end	
+			endif	
+		endif				
+	endif
+	write("In one second, the hours will be :", hours, ":", "minutes", ":", second, "second")
+
+----------------------------------------------------------------------------------------
+
+
+Exercice 4.4
+
+variable nbr1,prixtotal : reel:
+
+Debut
+	ecrire("Combien avez vous fait de photocopies ?");
+	lire (nbr1);
+	si nbr <=10 alors debut
+					prixtotal:= nbr1*0.10;
+					fin
+	finsi
+	si br >=10 et <=30 alors debut;
+					prixtotal:= nbr1*0.09;
+					fin
+	finsi
+	si nbr >30 alors debit
+					prixtotal:= nbr1*0.08;
+					fin
+	finsi
+	ecrire ("Le prix à payer est de" + nbr);
+fin
+
+
+
+Exercice 4.5
+
+variable	sexe : chaine_caractere:
+			age : reel: 
+
+debut	
+	ecrire("Veuillez saisir votre âge")
+	lire(age):
+	ecrire("Etes vous un homme ou une femme")
+	lire(sexe);
+	
+	si (sexe = "homme" et age > 20) alors debut	
+										ecrire("Vous devez payer des impots");
+									fin
+									sinon debut
+										ecrire ("Vous ne devez pas payer d'impots);
+									fin
+	finsi
+	si (sexe = "femme" et (age >= 18 et age <=25 ) 	alors debut	
+														ecrire("Vous devez payer des impots");
+														fin
+													sinon debut
+														ecrire ("Vous ne devez pas payer d'impots);
+	finsi
+fin	
+														
+------------------------------------------------------------------------------------
+CORRECTION
+------------------------------------ En Anglais ------------------------------------
+algorithme impots
+variables	
+	age: integer;
+	gender : string;
+begin	
+	write("Type your gender : M for Male, F for Female");
+	read(gender);
+	write("Type your age :");
+	read (age);
+	if ((gender = "M" and age > 20 or (gender = "F" and age >= 18 and age <= 35))
+		then	
+			begin		
+				write ("YOU MUST PAY TAXES");
+			end
+		else
+			begin
+				write ("YOU ARE LUCKY");
+			end
+	
+---------------------------------------------------------------------------------	
+					
+	
+
+
+

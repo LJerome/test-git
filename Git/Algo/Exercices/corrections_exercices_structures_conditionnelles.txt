@@ -1,0 +1,217 @@
+Exercice 3.1 et 3.4
+algorithme verification_nombre
+varaibles
+	nombre : réel;
+debut
+	ecrire("Veuillez saisir un nombre : ");
+	lire(nombre);
+	si (nombre > 0) alors
+						debut
+							ecrire("Le nombre saisi est positif");
+						fin
+					sinon si (nombre < 0) 
+									alors debut
+											 ecrire("Le nombre saisi est négatif");					
+										  fin
+									sinon debut
+											 ecrire("le nombre est nul");
+										  fin
+						  finsi	
+	finsi
+fin
+
+Exercice 3.2 et 3.5 :
+algorithme prdoduit_nombres
+varaibles
+	nombre1, nombre2 : reel;
+debut
+	ecrire("Veuillez saisir un nombre : ");
+	lire(nombre1);
+	ecrire("Veuillez saisir un nombre : ");
+	lire(nombre2);
+	
+	// Meillleur solution
+	si ((nombre1 < 0 xor nombre2 < 0) et (nombre1 != 0 et nombre2 != 0)) alors debut 
+																					ecrire("produit négatif");
+																			   fin
+						 sinon si (nombre1 = 0 ou nobmre2 = 0) alors debut
+																		ecrire("produit nul");
+															         fin
+															   sinon debut
+																  ecrire("produit positif");
+																	 fin
+							   finsi
+	// solution moyenne
+	si(nombre1 > 0 et nombre2 > 0 ou nombre1 < 0 et nombre2 < 0) 
+		alors debut 
+				ecrire("Le produit des deux nombres est positif.");
+			  fin
+		sinon si (nombre1 = 0 ou nombre2 = 0) alors 
+													debut
+														ecrire("produit nul");
+													fin
+											  sinon 
+													debut
+														ecrire("produit négatif");
+													fin
+			  finsi
+		
+		debut
+				ecrire("Le produit des deux nombes est négatif");
+			  fin
+	finsi
+fin	
+
+
+Exercice 3.3
+
+algorithme ordre_alphabétique
+varaibles 
+	nom1, nom2, nom3 : chaine_caracteres;
+debut
+	ecrire("Veuillez saisir trois noms : ");
+	lire(nom1, nom2, nom3);
+	
+	si(nom1 < nom2 et nom2 < nom3) alors 
+										debut
+											ecrire("Noms triés");
+										fin
+								   sinon debut
+											ecrire("Noms non triés");
+										 fin
+	finsi
+fin
+
+Exercice 3.6
+
+algorithme categorie_enfant
+variables 
+	age : entier;
+	
+debut
+	ecrire("Saisissez l'age de votre enfant :");
+	lire(age);
+	
+	si (age = 6 ou age = 7) alors debut
+										ecrire("POUSSIN");
+								  fin
+	finsi
+	si (age = 8 ou age = 9) alors debut
+										ecrire("PUPILLE");
+								  fin
+	finsi
+	si (age = 10 ou age = 11) alors debut
+										ecrire("MINIME");
+								  fin
+	finsi
+	si (age >= 12) alors debut  
+					ecrire("CADET");
+				fin
+	si (age < 6) alors début
+						 ecrire("REVIENS QUANT IL AURA 6 ANS");
+					   fin
+fin
+
+Exercice 4.3 : 
+
+algorithme heure
+variables 
+	hours, minutes, seconds : integer;
+
+begin
+	read(hours, minutes, seconds);
+	// version 1
+	if(seconds != 59) then 
+			begin
+				seconds++;
+			end
+	endif
+	if(seconds = 59 and minutes = 59 and hours = 23) then 
+			begin
+				hours : = 0;
+				minutes : = 0;
+				seconds := 0;
+			end
+	endif
+	if(seconds = 59 and minutes = 59 and hours != 23) then 
+			begin
+				hours++;
+				minutes : = 0;
+				seconds := 0;
+			end
+	endif
+	if(seconds = 59 and minutes != 59 and hours != 23) then 
+			begin
+				minutes++;
+				seconds := 0;
+			end
+	endif
+	
+	
+	
+	// version 2
+	if(seconds < 59) 
+		then begin
+				seconds++;
+			 end
+		else if (minutes = 59 and hours = 23) 
+				then 
+					  begin
+						hours : = 0;
+						minutes : = 0;
+						seconds : = 0;
+					  end
+				else if(minutes != 59) 
+						then 
+							begin 
+								minutes++;
+								seconds := 0;
+							end
+						else begin
+								hours++;
+								minutes := 0;
+								secondes := 0;
+							 end
+					 endif
+			 endif
+	endif
+	write("In one second, the hour will be : ", hours, ":", minutes, ":", seconds);
+end
+
+
+Exercice 4.5 : impots
+
+
+algorithme impots
+variables 
+	age : integer, 
+	gender : string;
+begin
+	write("Type your gender : M for Male, F for female");
+	read(gender);
+	write("Type your age : ");
+	read(age);
+	if((gender = "M" and age > 20) or (gender = "F" and age >= 18 and age <= 35)) 
+		then
+			begin
+				write("YOU MUST PAY TAXES");
+			end
+		else 
+			begin
+				write("YOU ARE LUCKY");
+			end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
